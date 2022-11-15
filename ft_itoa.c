@@ -6,13 +6,13 @@
 /*   By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 08:13:40 by naterrie          #+#    #+#             */
-/*   Updated: 2022/11/15 09:57:46 by naterrie         ###   ########lyon.fr   */
+/*   Updated: 2022/11/15 21:19:29 by naterrie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long	ft_size(int n)
+static long	ft_size(int n)
 {
 	long	size;
 
@@ -32,7 +32,7 @@ long	ft_size(int n)
 	return (size++);
 }
 
-int	ft_sign(int n)
+static int	ft_sign(int n)
 {
 	if (n < 0)
 		return (1);

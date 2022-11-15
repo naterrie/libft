@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/15 00:17:00 by naterrie          #+#    #+#             */
-/*   Updated: 2022/11/15 20:27:12 by naterrie         ###   ########lyon.fr   */
+/*   Created: 2022/11/15 20:31:16 by naterrie          #+#    #+#             */
+/*   Updated: 2022/11/15 21:09:59 by naterrie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+t_list	*ft_lstnew(void *content)
 {
-	size_t	i;
-
-	i = 0;
-	if (!dst && !src)
-		return (NULL);
-	while (i < n)
-	{
-		((char *)dst)[i] = ((const char *)src)[i];
-		i++;
-	}
-	return (dst);
+	(void) content;
+	return (0);
 }

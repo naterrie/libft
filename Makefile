@@ -1,7 +1,11 @@
-OBJS	= $(SRCS:.c=.o)
+OBJS		= $(SRCS:.c=.o)
+
+OBJS_BONUS	= $(BONUS:.c=.o)
 
 %.o: %.c
 		$(CC) -I. -o $@ -c $? $(FLAGS)
+
+BONUS	=	ft_lstnew.c \
 
 SRCS	=	ft_isalpha.c \
 			ft_isdigit.c \
@@ -46,15 +50,18 @@ NAME	= libft.a
 
 all:	$(NAME)
 
+bonus : $(OBJS) $(OBJS_BONUS)
+	ar rcs $(NAME) $(OBJS)
+
 $(NAME):	$(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 clean:
-	@rm -f $(OBJS)
+	@rm -f $(OBJS) $(OBJS_BONUS)
 
 fclean:	clean
 	@rm -f $(NAME)
 
 re:	fclean $(NAME)
 
-.PHONY:	all clean fclean re
+.PHONY:	all clean fclean re bonus

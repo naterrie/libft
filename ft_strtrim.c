@@ -6,13 +6,13 @@
 /*   By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 00:55:06 by naterrie          #+#    #+#             */
-/*   Updated: 2022/11/15 06:03:31 by naterrie         ###   ########lyon.fr   */
+/*   Updated: 2022/11/15 21:19:29 by naterrie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	trimstart(const char *s1, const char *set)
+static int	trimstart(const char *s1, const char *set)
 {
 	size_t	len;
 	size_t	i;
@@ -28,7 +28,7 @@ int	trimstart(const char *s1, const char *set)
 	return (i);
 }
 
-int	trimend(const char *s1, const char *set)
+static int	trimend(const char *s1, const char *set)
 {
 	size_t	len;
 	size_t	i;
