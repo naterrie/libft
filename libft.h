@@ -6,7 +6,7 @@
 /*   By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 23:42:23 by naterrie          #+#    #+#             */
-/*   Updated: 2022/11/15 21:13:23 by naterrie         ###   ########lyon.fr   */
+/*   Updated: 2022/11/15 21:53:39 by naterrie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ void	ft_bzero(void *s, size_t n);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
+void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 size_t	ft_strlen(const char *s);

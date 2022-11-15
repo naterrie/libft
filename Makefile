@@ -3,9 +3,10 @@ OBJS		= $(SRCS:.c=.o)
 OBJS_BONUS	= $(BONUS:.c=.o)
 
 %.o: %.c
-		$(CC) -I. -o $@ -c $? $(FLAGS)
+		cc -I. -o $@ -c $? $(FLAGS)
 
 BONUS	=	ft_lstnew.c \
+			ft_lstadd_front.c \
 
 SRCS	=	ft_isalpha.c \
 			ft_isdigit.c \
@@ -42,7 +43,6 @@ SRCS	=	ft_isalpha.c \
 			ft_putendl_fd.c \
 			ft_putnbr_fd.c \
 
-CC	= cc
 
 FLAGS	= -Wall -Wextra -Werror -I.
 
@@ -50,7 +50,7 @@ NAME	= libft.a
 
 all:	$(NAME)
 
-bonus : $(OBJS) $(OBJS_BONUS)
+bonus: $(OBJS) $(OBJS_BONUS)
 	ar rcs $(NAME) $(OBJS)
 
 $(NAME):	$(OBJS)
