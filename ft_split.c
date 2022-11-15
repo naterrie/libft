@@ -6,7 +6,7 @@
 /*   By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 06:05:27 by naterrie          #+#    #+#             */
-/*   Updated: 2022/11/15 21:14:30 by naterrie         ###   ########lyon.fr   */
+/*   Updated: 2022/11/15 21:32:02 by naterrie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ static size_t	countstr(char const *s, char c)
 				i++;
 			nbstr++;
 		}
-		i++;
+		else
+			i++;
 	}
 	return (nbstr);
 }
