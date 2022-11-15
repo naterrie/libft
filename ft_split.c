@@ -6,7 +6,7 @@
 /*   By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 06:05:27 by naterrie          #+#    #+#             */
-/*   Updated: 2022/11/15 10:03:13 by naterrie         ###   ########lyon.fr   */
+/*   Updated: 2022/11/15 19:31:17 by naterrie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,8 @@ char	**ft_split(char const *s, char c)
 	size_t	i;
 	size_t	nbstr;
 
+	if (!s)
+		return (NULL);
 	nbstr = countstr(s, c);
 	str = (char **)malloc(sizeof(char *) * (nbstr + 1));
 	if (str)
