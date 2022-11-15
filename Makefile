@@ -7,6 +7,7 @@ OBJS_BONUS	= $(BONUS:.c=.o)
 
 BONUS	=	ft_lstnew.c \
 			ft_lstadd_front.c \
+			ft_lstsize.c \
 
 SRCS	=	ft_isalpha.c \
 			ft_isdigit.c \
@@ -51,7 +52,7 @@ NAME	= libft.a
 all:	$(NAME)
 
 bonus: $(OBJS) $(OBJS_BONUS)
-	ar rcs $(NAME) $(OBJS)
+	ar rcs $(NAME) $(OBJS) $(OBJS_BONUS)
 
 $(NAME):	$(OBJS)
 	ar rcs $(NAME) $(OBJS)
