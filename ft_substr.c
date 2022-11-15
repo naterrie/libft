@@ -6,7 +6,7 @@
 /*   By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 00:55:07 by naterrie          #+#    #+#             */
-/*   Updated: 2022/11/15 00:55:41 by naterrie         ###   ########lyon.fr   */
+/*   Updated: 2022/11/15 01:27:44 by naterrie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*str;
 
 	str = (char *)malloc(sizeof(*s) * (len + 1));
-	if (!str)
+	if (!str || !s)
 		return (NULL);
 	i = 0;
 	j = 0;
