@@ -1,4 +1,8 @@
 OBJS	= $(SRCS:.c=.o)
+
+%.o: %.c
+		$(CC) -I. -o $@ -c $? $(FLAGS)
+
 SRCS	=	ft_isalpha.c \
 			ft_isdigit.c \
 			ft_isalnum.c \
@@ -25,11 +29,10 @@ SRCS	=	ft_isalpha.c \
 			ft_substr.c \
 			ft_strjoin.c \
 			ft_strtrim.c \
-			ft_split.c \
 
-CC	= gcc
+CC	= cc
 
-CFLAGS	= -Wall -Wextra -Werror -I.
+FLAGS	= -Wall -Wextra -Werror -I.
 
 NAME	= libft.a
 
