@@ -6,13 +6,13 @@
 /*   By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 08:13:40 by naterrie          #+#    #+#             */
-/*   Updated: 2022/11/15 09:01:46 by naterrie         ###   ########lyon.fr   */
+/*   Updated: 2022/11/15 09:57:46 by naterrie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long	size(int n)
+long	ft_size(int n)
 {
 	long	size;
 
@@ -32,12 +32,11 @@ long	size(int n)
 	return (size++);
 }
 
-int	sign(int n)
+int	ft_sign(int n)
 {
 	if (n < 0)
 		return (1);
 	return (0);
-
 }
 
 char	*ft_itoa(int n)
@@ -47,17 +46,21 @@ char	*ft_itoa(int n)
 	char	*str;
 
 	nlong = n;
-	len = size(nlong);
+	len = ft_size(nlong);
 	str = (char *)malloc((len + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
 	str[len] = '\0';
 	len--;
 	if (nlong < 0)
-		nlong = -nlong
+		nlong = -nlong;
 	while (len >= 0)
 	{
-		str[len] = (nlong %10) + '0';
-		len--
+		str[len] = (nlong % 10) + '0';
+		len--;
+		nlong /= 10;
 	}
+	if (ft_sign(n))
+		str[0] = '-';
+	return (str);
 }
