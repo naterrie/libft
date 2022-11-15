@@ -6,7 +6,7 @@
 /*   By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 00:55:06 by naterrie          #+#    #+#             */
-/*   Updated: 2022/11/15 01:26:38 by naterrie         ###   ########lyon.fr   */
+/*   Updated: 2022/11/15 06:03:31 by naterrie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	trimstart(const char *s1, const char *set)
 	while (i < len)
 	{
 		if (ft_strchr(set, s1[i]) == 0)
-			break ;
+			return (i);
 		i++;
 	}
 	return (i);
@@ -38,7 +38,7 @@ int	trimend(const char *s1, const char *set)
 	while (i < len)
 	{
 		if (ft_strchr(set, s1[len - i - 1]) == 0)
-			break ;
+			return (len - i);
 		i++;
 	}
 	return (len - i);

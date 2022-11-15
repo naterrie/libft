@@ -29,6 +29,8 @@ SRCS	=	ft_isalpha.c \
 			ft_substr.c \
 			ft_strjoin.c \
 			ft_strtrim.c \
+			ft_split.c \
+
 
 CC	= cc
 
@@ -45,7 +47,7 @@ clean:
 	@rm -f $(OBJS)
 
 fclean:	clean
-	@rm -f $(NAME)
+	@rm -f $(NAME) main.c a.out
 
 re:	fclean $(NAME)
 
