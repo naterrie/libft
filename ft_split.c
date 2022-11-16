@@ -6,14 +6,13 @@
 /*   By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 06:05:27 by naterrie          #+#    #+#             */
-/*   Updated: 2022/11/16 15:25:51 by naterrie         ###   ########lyon.fr   */
+/*   Updated: 2022/11/16 16:04:18 by naterrie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-static size_t	countstr(char const *s, char c)
+static size_t	count_str(char const *s, char c)
 {
 	size_t	nbstr;
 	size_t	i;
@@ -34,7 +33,7 @@ static size_t	countstr(char const *s, char c)
 	return (nbstr);
 }
 
-static const char	*dupuntilc(char **dest, char const *src, char c)
+static const char	*dup_until_c(char **dest, char const *src, char c)
 {
 	size_t	len;
 	size_t	i;
@@ -58,7 +57,7 @@ static const char	*dupuntilc(char **dest, char const *src, char c)
 	return (src);
 }
 
-static void	freestr(char ***str, size_t len)
+static void	free_str(char ***str, size_t len)
 {
 	size_t	i;
 

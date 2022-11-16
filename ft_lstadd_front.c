@@ -6,7 +6,7 @@
 /*   By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 21:52:57 by naterrie          #+#    #+#             */
-/*   Updated: 2022/11/15 22:46:56 by naterrie         ###   ########lyon.fr   */
+/*   Updated: 2022/11/16 15:59:33 by naterrie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	new->content = *lst;
-	new->lst = ;
+	new->next = *lst;
+	*lst = new;
 }
