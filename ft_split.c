@@ -6,7 +6,7 @@
 /*   By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 06:05:27 by naterrie          #+#    #+#             */
-/*   Updated: 2022/11/16 16:04:18 by naterrie         ###   ########lyon.fr   */
+/*   Updated: 2022/11/16 16:42:57 by naterrie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	nbstr = countstr(s, c);
+	nbstr = count_str(s, c);
 	str = (char **)malloc(sizeof(char *) * (nbstr + 1));
 	if (str)
 	{
@@ -87,10 +87,10 @@ char	**ft_split(char const *s, char c)
 		i = 0;
 		while (i < nbstr)
 		{
-			s = dupuntilc(str + i, s, c);
+			s = dup_until_c(str + i, s, c);
 			if (s == NULL)
 			{
-				freestr(&str, i);
+				free_str(&str, i);
 				break ;
 			}
 			i++;

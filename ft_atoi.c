@@ -6,11 +6,18 @@
 /*   By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 23:52:39 by naterrie          #+#    #+#             */
-/*   Updated: 2022/11/14 23:55:21 by naterrie         ###   ########lyon.fr   */
+/*   Updated: 2022/11/16 17:47:40 by naterrie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	sign(int nb)
+{
+	if (nb == -1)
+		return (-1);
+	return (0);
+}
 
 int	ft_atoi(const char *str)
 {
@@ -20,19 +27,22 @@ int	ft_atoi(const char *str)
 
 	i = 0;
 	nbr = 0;
-	neg = 0;
-	while (str[i] != '\0' && (str[i] == 32 || str[i] == '\t' || str[i] == '\n'
-			|| str[i] == '\r' || str[i] == '\v' || str[i] == '\f'))
+	neg = -1;
+	while ((str[i] <= 13 && str[i] >= 9) || str[i] == ' ')
 		i++;
 	if (str[i] != '\0' && str[i] == '-')
 	{
-		neg = 1;
+		neg *= -1;
 		i++;
 	}
 	else if (str[i] == '+')
 		i++;
 	while (str[i] != '\0' && ft_isdigit(str[i]))
+	{
+		if (nbr != (nbr * 10) / 10)
+			return (sign(neg));
 		nbr = (nbr * 10) + (str[i++] - '0');
+	}
 	if (neg == 1)
 		return (-nbr);
 	return (nbr);
