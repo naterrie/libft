@@ -8,6 +8,7 @@ OBJS_BONUS	= $(BONUS:.c=.o)
 BONUS	=	ft_lstnew.c \
 			ft_lstadd_front.c \
 			ft_lstsize.c \
+			ft_lstlast.c \
 
 SRCS	=	ft_isalpha.c \
 			ft_isdigit.c \
@@ -42,7 +43,7 @@ SRCS	=	ft_isalpha.c \
 			ft_putchar_fd.c \
 			ft_putstr_fd.c \
 			ft_putendl_fd.c \
-			ft_putnbr_fd.c \
+			ft_putnbr_fd.c
 
 
 FLAGS	= -Wall -Wextra -Werror -I.

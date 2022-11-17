@@ -6,7 +6,7 @@
 /*   By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 23:42:23 by naterrie          #+#    #+#             */
-/*   Updated: 2022/11/15 22:30:52 by naterrie         ###   ########lyon.fr   */
+/*   Updated: 2022/11/17 16:23:25 by naterrie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 char	**ft_split(char const *s, char c);
 
+t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstnew(void *content);
 
 #endif
