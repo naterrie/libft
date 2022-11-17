@@ -13,6 +13,7 @@ BONUS	=	ft_lstnew.c \
 			ft_lstdelone.c \
 			ft_lstclear.c \
 			ft_lstiter.c \
+			ft_lstmap.c \
 
 SRCS	=	ft_isalpha.c \
 			ft_isdigit.c \

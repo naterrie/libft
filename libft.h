@@ -6,7 +6,7 @@
 /*   By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 23:42:23 by naterrie          #+#    #+#             */
-/*   Updated: 2022/11/17 21:19:23 by naterrie         ###   ########lyon.fr   */
+/*   Updated: 2022/11/17 21:22:24 by naterrie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,6 @@ char	**ft_split(char const *s, char c);
 t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstnew(void *content);
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif
