@@ -6,7 +6,7 @@
 /*   By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 22:29:40 by naterrie          #+#    #+#             */
-/*   Updated: 2022/11/16 17:08:12 by naterrie         ###   ########lyon.fr   */
+/*   Updated: 2022/11/17 15:35:39 by naterrie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,10 @@ int	ft_lstsize(t_list *lst)
 	new = lst;
 	while (new)
 	{
-		new = lst->content;
+		new = new->lst;
 		i++;
+		if (new == NULL)
+			return (i +1);
 	}
 	return (i);
 }
