@@ -6,7 +6,7 @@
 /*   By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 23:52:39 by naterrie          #+#    #+#             */
-/*   Updated: 2022/11/16 17:47:40 by naterrie         ###   ########lyon.fr   */
+/*   Updated: 2022/11/17 19:08:31 by naterrie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	ft_atoi(const char *str)
 	}
 	else if (str[i] == '+')
 		i++;
-	while (str[i] != '\0' && ft_isdigit(str[i]))
+	while (ft_isdigit(str[i]))
 	{
 		if (nbr != (nbr * 10) / 10)
 			return (sign(neg));
