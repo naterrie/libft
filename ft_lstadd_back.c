@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/17 16:22:43 by naterrie          #+#    #+#             */
-/*   Updated: 2022/11/17 17:14:37 by naterrie         ###   ########lyon.fr   */
+/*   Created: 2022/11/17 16:49:03 by naterrie          #+#    #+#             */
+/*   Updated: 2022/11/17 17:07:24 by naterrie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	while (lst && lst->next)
-		lst = lst->next;
-	return (lst);
+	t_list	*last;
+
+	if (lst && *lst)
+	{
+		last = ft_lstlast(*lst);
+		last->next = new;
+	}
+	if (lst && !*lst)
+		*lst = new;
 }
