@@ -2,7 +2,9 @@ OBJS		= $(SRCS:.c=.o)
 
 OBJS_BONUS	= $(BONUS:.c=.o)
 
-%.o: %.c
+HEADER = libft.h
+
+%.o: %.c makefille
 		cc -I. -o $@ -c $? $(FLAGS)
 
 BONUS	=	ft_lstnew_bonus.c \
