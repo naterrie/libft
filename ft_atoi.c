@@ -19,7 +19,7 @@ static int	sign(int nb)
 	return (0);
 }
 
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *sttr)
 {
 	long	i;
 	long	nbr;
@@ -28,20 +28,20 @@ int	ft_atoi(const char *str)
 	i = 0;
 	nbr = 0;
 	neg = -1;
-	while ((str[i] <= 13 && str[i] >= 9) || str[i] == ' ')
+	while ((sttr[i] <= 13 && sttr[i] >= 9) || sttr[i] == ' ')
 		i++;
-	if (str[i] != '\0' && str[i] == '-')
+	if (sttr[i] != '\0' && sttr[i] == '-')
 	{
 		neg *= -1;
 		i++;
 	}
-	else if (str[i] == '+')
+	else if (sttr[i] == '+')
 		i++;
-	while (ft_isdigit(str[i]))
+	while (ft_isdigit(sttr[i]))
 	{
 		if (nbr != (nbr * 10) / 10)
 			return (sign(neg));
-		nbr = (nbr * 10) + (str[i++] - '0');
+		nbr = (nbr * 10) + (sttr[i++] - '0');
 	}
 	if (neg == 1)
 		return (-nbr);
