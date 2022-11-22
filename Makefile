@@ -61,14 +61,14 @@ all:	$(NAME)
 bonus: $(OBJS) $(OBJS_BONUS)
 	ar rcs $(NAME) $(OBJS) $(OBJS_BONUS)
 
-$(NAME):	$(OBJS)
+$(NAME):	$(OBJS) $(HEADER) Makefile
 	ar rcs $(NAME) $(OBJS)
 
 clean:
-	@rm -f $(OBJS) $(OBJS_BONUS)
+	rm -f $(OBJS) $(OBJS_BONUS)
 
 fclean:	clean
-	@rm -f $(NAME)
+	rm -f $(NAME)
 
 re:	fclean $(NAME)
 
