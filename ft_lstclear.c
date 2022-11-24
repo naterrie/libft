@@ -6,7 +6,7 @@
 /*   By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 19:42:36 by naterrie          #+#    #+#             */
-/*   Updated: 2022/11/17 20:53:23 by naterrie         ###   ########lyon.fr   */
+/*   Updated: 2022/11/24 20:04:42 by naterrie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,5 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 		ft_lstdelone(*lst, del);
 		*lst = temp;
 	}
+	lst = 0;
 }
