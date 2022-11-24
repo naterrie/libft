@@ -4,7 +4,7 @@ OBJS_BONUS	= $(BONUS:.c=.o)
 
 HEADER = libft.h
 
-%.o: %.c $(HEADER) makefille
+%.o: %.c
 		cc -I. -o $@ -c $? $(FLAGS)
 
 BONUS	=	ft_lstnew.c \

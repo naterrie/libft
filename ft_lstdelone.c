@@ -6,7 +6,7 @@
 /*   By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 17:47:50 by naterrie          #+#    #+#             */
-/*   Updated: 2022/11/22 15:52:08 by naterrie         ###   ########lyon.fr   */
+/*   Updated: 2022/11/24 13:48:11 by naterrie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	if (!del)
+	if (!del || !lst)
 		return ;
 	del(lst->content);
 	free (lst);
