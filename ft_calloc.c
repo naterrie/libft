@@ -6,7 +6,7 @@
 /*   By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 00:47:51 by naterrie          #+#    #+#             */
-/*   Updated: 2022/11/22 17:05:03 by naterrie         ###   ########lyon.fr   */
+/*   Updated: 2022/11/24 19:14:01 by naterrie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_calloc(size_t count, size_t size)
 		count = 1;
 		size = 1;
 	}
-	str = (char *)malloc(count * size);
+	str = malloc((sizeof(char) * (count * size)));
 	if (!str)
 		return (NULL);
 	ft_bzero(str, size * count);

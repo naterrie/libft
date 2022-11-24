@@ -6,13 +6,11 @@
 /*   By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 00:26:59 by naterrie          #+#    #+#             */
-/*   Updated: 2022/11/18 14:44:39 by naterrie         ###   ########lyon.fr   */
+/*   Updated: 2022/11/24 19:15:56 by naterrie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
-#include <string.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {

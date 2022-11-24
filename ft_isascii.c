@@ -6,9 +6,11 @@
 /*   By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 00:50:04 by naterrie          #+#    #+#             */
-/*   Updated: 2022/11/24 15:33:25 by naterrie         ###   ########lyon.fr   */
+/*   Updated: 2022/11/24 19:15:05 by naterrie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isascii(int c)
 {
