@@ -6,7 +6,7 @@
 /*   By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 08:13:40 by naterrie          #+#    #+#             */
-/*   Updated: 2022/11/18 20:13:37 by naterrie         ###   ########lyon.fr   */
+/*   Updated: 2022/11/24 15:49:08 by naterrie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ char	*ft_itoa(int n)
 
 	nlong = n;
 	len = ft_size(nlong);
-	str = (char *)malloc((len + 1) * sizeof(char));
+	str = malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
 	str[len] = '\0';
