@@ -6,7 +6,7 @@
 /*   By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 06:05:27 by naterrie          #+#    #+#             */
-/*   Updated: 2022/11/16 16:42:57 by naterrie         ###   ########lyon.fr   */
+/*   Updated: 2022/11/25 14:35:13 by naterrie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ char	**ft_split(char const *s, char c)
 			if (s == NULL)
 			{
 				free_str(&str, i);
-				break ;
+				return (str);
 			}
 			i++;
 		}

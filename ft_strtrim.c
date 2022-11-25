@@ -6,7 +6,7 @@
 /*   By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 00:55:06 by naterrie          #+#    #+#             */
-/*   Updated: 2022/11/15 21:19:29 by naterrie         ###   ########lyon.fr   */
+/*   Updated: 2022/11/25 14:37:05 by naterrie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = trimend(s1, set);
 	if (start >= end)
 		return (ft_strdup(""));
-	newstr = (char *)malloc(sizeof(char) * (end - start + 1));
+	newstr = malloc(sizeof(char) * (end - start + 1));
 	if (newstr == NULL)
 		return (NULL);
 	ft_strlcpy(newstr, s1 + start, end - start + 1);
