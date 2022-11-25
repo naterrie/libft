@@ -6,7 +6,7 @@
 /*   By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 00:50:04 by naterrie          #+#    #+#             */
-/*   Updated: 2022/11/24 19:15:05 by naterrie         ###   ########lyon.fr   */
+/*   Updated: 2022/11/25 14:19:31 by naterrie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isascii(int c)
 {
-	if (c >= 0 && c < 128)
+	if (c >= 0 && c <= 127)
 		return (1);
 	return (0);
 }

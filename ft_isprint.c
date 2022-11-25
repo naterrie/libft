@@ -6,7 +6,7 @@
 /*   By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 23:59:47 by naterrie          #+#    #+#             */
-/*   Updated: 2022/11/15 00:03:31 by naterrie         ###   ########lyon.fr   */
+/*   Updated: 2022/11/25 14:20:09 by naterrie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isprint(int c)
 {
-	if (c >= 32 && c < 127)
+	if (c >= 32 && c <= 126)
 		return (1);
 	return (0);
 }
